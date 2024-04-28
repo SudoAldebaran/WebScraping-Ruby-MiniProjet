@@ -1,9 +1,8 @@
 # doc ---------------------------------------------DESCRIPTION----------------------------------------------#
-
 # doc SCRIPT POUR PAGES WEB DYNAMIQUES
 
 # doc ---------------------------------------------REQUIRE--------------------------------------------------#
-require 'selenium-webdriver' #doc SELENIUM
+require 'selenium-webdriver' # doc SELENIUM
 require 'csv' # doc CSV
 
 # doc ---------------------------------------------SCRIPT---------------------------------------------------#
@@ -46,9 +45,9 @@ end
 
 CSV.open(
   'quotes.csv', # doc NOM DU FICHIER
-  'w+', #doc
-  write_headers: true,
-  headers: %w[Quote Author]
+  'w+', # doc MODE LECTURE ET ECRITURE DU FICHIER
+  write_headers: true, # doc ECRITURE DES TITRES : TRUE
+  headers: %w[Quote Author]# doc NOM DES TITRES
 ) do |csv|
   quotes.each do |quote|
     csv << quote
